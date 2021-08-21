@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="card">
+        <p-dataView #dv [value]="audioFiles" [paginator]="true" [rows]="9" filterBy="name" [sortField]="sortField"
+            [sortOrder]="sortOrder" layout="grid">
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+                    <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Name"
+                        (onChange)="onSortChange($event)" styleClass="p-mb-2 p-mb-md-0"></p-dropdown>
+                    <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+                  <i class="pi pi-search"></i>
+                  <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
+              </span>
+                    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                </div>
+            </ng-template>
+            <ng-template let-audiofile pTemplate="listItem">
+                <div class="p-col-12">
+                    <div class="audiofile-list-item">
+                        <div class="audiofile-list-detail">
+                            <div class="audiofile-name">{{audiofile.name}}</div>
+
+                            <app-waveform *ngIf="dv.layout == 'list'" [layout]="'grid'" [audiofile]="audiofile">
+                            </app-waveform>
+                            <span class="audiofile-downloads">Downloaded {{audiofile.downloads}} times</span>
+                            <span class="audiofile-category">{{audiofile.category}}</span>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template let-audiofile pTemplate="gridItem">
+                <div class="p-col-12 p-md-4">
+                    <div class="product-grid-item card">
+                        <div class="audiofile-grid-item-top">
+                            <div class="audiofile-name">{{audiofile.name}}</div>
+                        </div>
+                        <div class="audiofile-grid-item-content">
+                            <app-waveform *ngIf="dv.layout == 'grid'" [layout]="'grid'" [audiofile]="audiofile">
+                            </app-waveform>
+
+                        </div>
+                        <div class="audiofile-grid-item-bottom">
+                            <small>Downloaded {{audiofile.downloads}} times</small>
+
+                            <small class="audiofile-category">{{audiofile.category}}</small>
+
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+    </div>
