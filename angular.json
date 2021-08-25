@@ -27,8 +27,7 @@
                 "node_modules/primeng/resources/themes/saga-blue/theme.css",
                 "node_modules/primeng/resources/primeng.min.css",
                 "node_modules/primeicons/primeicons.css",
-                "node_modules/quill/dist/quill.snow.css",
-                "node_modules/bootstrap/css/bootstrap.min.css"
+                "node_modules/quill/dist/quill.snow.css"
             ],
             "scripts": []
           },

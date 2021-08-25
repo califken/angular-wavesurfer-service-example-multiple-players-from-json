@@ -18,15 +18,13 @@
                     <div class="audiofile-list-item">
                         <div class="audiofile-list-detail">
                             <div class="audiofile-name">{{audiofile.name}}</div>
-
                             <app-waveform *ngIf="dv.layout == 'list'" [layout]="'grid'" [audiofile]="audiofile">
                             </app-waveform>
-
-                            <div>
-                                <span class="audiofile-downloads">{{audiofile.downloads}} Downloads</span>
-                                <span class="badge rounded-pill bg-primary">Primary</span>
-<div class="badge">{{ audiofile.category}}</div>
-
+                            <div class="audiofile-grid-item-bottom">
+                                <p-chip class="audiofile-category" [label]="audiofile.category" icon="pi pi-tag">
+                                </p-chip>
+                                <p-chip class="audiofile-downloads" [label]="audiofile.downloads" icon="pi pi-download">
+                                </p-chip>
                             </div>
                         </div>
                     </div>
@@ -44,9 +42,9 @@
 
                         </div>
                         <div class="audiofile-grid-item-bottom">
-
-                            <span class="audiofile-category">{{audiofile.category}}</span>
-                            <span class="audiofile-downloads">{{audiofile.downloads}} Downloads</span>
+                            <p-chip class="audiofile-category" [label]="audiofile.category" icon="pi pi-tag"></p-chip>
+                            <p-chip class="audiofile-downloads" [label]="audiofile.downloads" icon="pi pi-download">
+                            </p-chip>
                         </div>
                     </div>
                 </div>

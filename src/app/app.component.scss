@@ -15,8 +15,11 @@
     margin: 0 0 1rem 0;
   }
 
-  .audiofile-downloads {
+  .audiofile-downloads .p-chip  {
     font-size: 0.7em;
+    float:right;
+    background-color:#eee;
+    color:#aaa;
   }
 
   .audiofile-category-icon {
@@ -24,13 +27,17 @@
     margin-right: 0.5rem;
   }
 
-  .audiofile-category {
+  .audiofile-category .p-chip {
     font-weight: 600;
     text-align: left;
     font-size: 0.7em;
     float: left;
+    background-color:#333;
+    color:#FFF;
   }
-
+  .audiofile-category .p-chip .pi-tag {
+    font-size:.9em;
+  }
   .audiofile-list-item {
     display: flex;
     align-items: center;

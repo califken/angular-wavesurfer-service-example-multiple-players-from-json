@@ -15,7 +15,9 @@ import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { RatingModule } from 'primeng/rating';
 import { RippleModule } from 'primeng/ripple';
+import { BadgeModule } from 'primeng/badge';
 
+import { ChipModule } from 'primeng/chip';
 import { WaveformComponent } from './waveform/waveform.component';
 import { AudioLibraryService } from './audiolibrary.service';
 
@@ -32,7 +34,9 @@ import { AudioLibraryService } from './audiolibrary.service';
     RippleModule,
     HttpClientModule,
     RatingModule,
-    FormsModule
+    FormsModule,
+    BadgeModule,
+    ChipModule
   ],
   declarations: [AppComponent, WaveformComponent],
   bootstrap: [AppComponent],
