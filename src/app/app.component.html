@@ -1,7 +1,10 @@
+<div class="heading"><h1>Angular Wavesurfer Service</h1>
+<p>Multiple Players from .json File Example</p>
+</div>
 <div class="container">
     <div class="card">
         <p-dataView #dv [value]="audioFiles" [paginator]="true" [rows]="9" filterBy="name" [sortField]="sortField"
-            [sortOrder]="sortOrder" layout="grid">
+            [sortOrder]="sortOrder" layout="list">
             <ng-template pTemplate="header">
                 <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
                     <p-dropdown [options]="sortOptions" [(ngModel)]="sortKey" placeholder="Sort By Name"
@@ -10,7 +13,7 @@
                   <i class="pi pi-search"></i>
                   <input type="search" pInputText placeholder="Search by Name" (input)="dv.filter($event.target.value)">
               </span>
-                    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                    <!-- <p-dataViewLayoutOptions></p-dataViewLayoutOptions> -->
                 </div>
             </ng-template>
             <ng-template let-audiofile pTemplate="listItem">
@@ -31,7 +34,7 @@
                 </div>
             </ng-template>
             <ng-template let-audiofile pTemplate="gridItem">
-                <div class="p-col-12 p-md-4">
+                <div class="p-col-4 p-md-4">
                     <div class="product-grid-item card">
                         <div class="audiofile-grid-item-top">
                             <div class="audiofile-name">{{audiofile.name}}</div>

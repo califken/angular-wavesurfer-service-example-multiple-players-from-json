@@ -1,4 +1,8 @@
 :host ::ng-deep {
+  .heading {
+    text-align: center;
+  }
+
   .p-dropdown {
     width: 14rem;
     font-weight: normal;
@@ -15,11 +19,11 @@
     margin: 0 0 1rem 0;
   }
 
-  .audiofile-downloads .p-chip  {
+  .audiofile-downloads .p-chip {
     font-size: 0.7em;
-    float:right;
-    background-color:#eee;
-    color:#aaa;
+    float: right;
+    background-color: #eee;
+    color: #aaa;
   }
 
   .audiofile-category-icon {
@@ -32,11 +36,11 @@
     text-align: left;
     font-size: 0.7em;
     float: left;
-    background-color:#333;
-    color:#FFF;
+    background-color: #333;
+    color: #fff;
   }
   .audiofile-category .p-chip .pi-tag {
-    font-size:.9em;
+    font-size: 0.9em;
   }
   .audiofile-list-item {
     display: flex;
