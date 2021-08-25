@@ -15,6 +15,10 @@
     margin: 0 0 1rem 0;
   }
 
+  .audiofile-downloads {
+    font-size: 0.7em;
+  }
+
   .audiofile-category-icon {
     vertical-align: middle;
     margin-right: 0.5rem;
@@ -22,9 +26,9 @@
 
   .audiofile-category {
     font-weight: 600;
-    vertical-align: middle;
-    text-align: right;
-    float: right;
+    text-align: left;
+    font-size: 0.7em;
+    float: left;
   }
 
   .audiofile-list-item {

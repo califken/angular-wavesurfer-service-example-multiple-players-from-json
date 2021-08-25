@@ -21,8 +21,13 @@
 
                             <app-waveform *ngIf="dv.layout == 'list'" [layout]="'grid'" [audiofile]="audiofile">
                             </app-waveform>
-                            <span class="audiofile-downloads">Downloaded {{audiofile.downloads}} times</span>
-                            <span class="audiofile-category">{{audiofile.category}}</span>
+
+                            <div>
+                                <span class="audiofile-downloads">{{audiofile.downloads}} Downloads</span>
+                                <span class="badge rounded-pill bg-primary">Primary</span>
+<div class="badge">{{ audiofile.category}}</div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,10 +44,9 @@
 
                         </div>
                         <div class="audiofile-grid-item-bottom">
-                            <small>Downloaded {{audiofile.downloads}} times</small>
 
-                            <small class="audiofile-category">{{audiofile.category}}</small>
-
+                            <span class="audiofile-category">{{audiofile.category}}</span>
+                            <span class="audiofile-downloads">{{audiofile.downloads}} Downloads</span>
                         </div>
                     </div>
                 </div>
